@@ -6,6 +6,7 @@ RUN chmod +x /usr/local/bin/confd
 
 RUN mkdir -p /etc/confd/{conf.d,templates}
 COPY conf.d /etc/confd/conf.d
+COPY default.conf /etc/nginx/conf.d/
 COPY templates /etc/confd/templates
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
